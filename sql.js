@@ -109,19 +109,24 @@ const bestEvent = country => {
 };
 
 /*
-Returns a SQL query string that will find the number of male medalists.
+Returns a SQL query string that will find the number of medalists per gender.
 */
+
+const bestPerGender = (gender, country) => {
+  if(['Men', 'Women'].includes(gender)){
+    return `SELECT COUNT(DISTINCT name) FROM GoldMedal WHERE country = '${country}' and gender = '${gender}'`;
+  } else {
+    return null;
+  }
+}
 
 const numberMenMedalists = country => {
-  return;
+  return bestPerGender('Men', country);
 };
 
-/*
-Returns a SQL query string that will find the number of female medalists.
-*/
 
 const numberWomenMedalists = country => {
-  return;
+  return bestPerGender('Women', country);
 };
 
 /*
