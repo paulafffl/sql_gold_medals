@@ -87,7 +87,7 @@ won the most medals, along with the number of medals aliased to 'count'.
 */
 
 const bestDiscipline = country => {
-  return;
+  return bestAtSomething('discipline', country);
 };
 
 /*
@@ -96,7 +96,7 @@ won the most medals, along with the number of medals aliased to 'count'.
 */
 
 const bestSport = country => {
-  return;
+  return bestAtSomething('sport', country);
 };
 
 /*
@@ -105,7 +105,7 @@ won the most medals, along with the number of medals aliased to 'count'.
 */
 
 const bestEvent = country => {
-  return;
+  return bestAtSomething('event', country);
 };
 
 /*
