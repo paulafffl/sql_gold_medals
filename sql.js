@@ -45,8 +45,8 @@ won the most medals at a given season, along with the number of medals aliased t
 */
 
 const mostSeasonWins = (season, country) => {
-  if (season =='Summer' || season == 'Winter') {
-    return `SELECT year, COUNT(*) AS 'count' FROM GoldMedal WHERE country = '${country}' AND season = '${season}' ORDER BY COUNT(*) DESC LIMIT 1`;
+  if (season == 'Summer' || season == 'Winter') {
+    return `SELECT year, COUNT(*) AS 'count' FROM GoldMedal WHERE country = '${country}' AND season = '${season}' GROUP BY year ORDER BY COUNT(*) DESC LIMIT 1;`;
   } else {
     return null;
   }
@@ -66,9 +66,9 @@ won the most medals at a given parameter, along with the number of medals aliase
 */
 const bestAtSomething = (bestAtSomething, country) => {
   if (['year', 'discipline', 'sport', 'event'].includes(bestAtSomething)) {
-    return `SELECT '${bestAtSomething}', COUNT(*) AS 'count' FROM GoldMedal WHERE country = '${country}' GROUP BY '${bestAtSomething}' ORDER BY COUNT(*) DESC LIMIT 1`;  
+    return `SELECT ${bestAtSomething}, COUNT(*) AS 'count' FROM GoldMedal WHERE country = '${country}' GROUP BY ${bestAtSomething} ORDER BY COUNT(*) DESC LIMIT 1`;  
   } else {
-    return null
+    return null;
   }
 };
 
