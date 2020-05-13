@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-In this project you will be writing all the SQL statements for an Olympic metrics reporting web application called Gold Medal Metrics.
+In this project you I wrote all the SQL statements for an Olympic metrics reporting web application called Gold Medal Metrics.
 
 Gold Medal Metrics allows users to:
 
@@ -12,7 +12,7 @@ Gold Medal Metrics allows users to:
  - View a list of every Olympic win a country has with the year, season, winner name, city, and event.
  - Sort the list of Olympic wins by any of these attributes.
 
-## How To Begin
+## Project Instructions
 
 To start, download the starting code for this project <a href="https://s3.amazonaws.com/codecademy-content/PRO/skill-paths/backend-javascript/projects/gold-medal-metrics/project-5-gold-medal-metrics-start.zip" target="_blank">here</a>. After downloading the zip folder, double click it to uncompress it and access the contents of this project.
 
